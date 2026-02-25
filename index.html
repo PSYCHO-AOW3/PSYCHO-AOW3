@@ -9,15 +9,23 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
-body{background:#000;color:#fff;text-align:center;min-height:100vh;overflow-x:hidden;}
+body{
+background:#000;
+color:#fff;
+text-align:center;
+min-height:100vh;
+overflow-x:hidden;
+}
 
 /* Glow fon */
 body::before{
 content:"";
 position:fixed;
-width:900px;height:900px;
+width:900px;
+height:900px;
 background:radial-gradient(circle, rgba(255,120,0,0.25), transparent 70%);
-top:50%;left:50%;
+top:50%;
+left:50%;
 transform:translate(-50%,-50%);
 z-index:-1;
 animation:fon 8s infinite alternate ease-in-out;
@@ -27,27 +35,26 @@ animation:fon 8s infinite alternate ease-in-out;
 100%{transform:translate(-50%,-50%) scale(1.15);}
 }
 
-/* ASOSIY SAHIFA */
-#asosiy{
-display:block;
-}
-
+/* Logo */
 .logo{margin-top:35px;}
 .logo img{
-max-width:360px;width:85%;
+max-width:340px;
+width:85%;
 filter:drop-shadow(0 0 18px #ff8c00);
 }
 
+/* Sarlavha */
 .sarlavha{
-margin:18px 20px 0;
-font-size:17px;
+margin:20px;
+font-size:18px;
 font-weight:800;
 letter-spacing:1.5px;
 color:#ffa726;
 text-shadow:0 0 6px #ff8c00,0 0 12px rgba(255,140,0,0.6);
 }
 
-.panjarasi{
+/* Grid */
+.grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:18px;
@@ -76,33 +83,32 @@ border:1px solid orange;
 box-shadow:0 0 12px rgba(255,140,0,0.6);
 }
 
-/* XARITALAR SAHIFA */
-#xaritalar{
-display:none;
-padding-top:40px;
-}
+/* Xaritalar sahifa */
+#xaritalar{display:none;padding-top:40px;}
 
 .x-title{
 font-size:22px;
 color:#ffa726;
 text-shadow:0 0 8px orange;
+margin-bottom:30px;
 }
 
 .x-grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:20px;
-max-width:800px;
-margin:40px auto;
+max-width:700px;
+margin:0 auto 40px auto;
 padding:0 20px;
 }
 
 .karta{
 background:#111;
-padding:30px;
+padding:15px;
 border-radius:20px;
 border:1px solid #222;
 transition:0.3s;
+cursor:pointer;
 }
 
 .karta:hover{
@@ -111,20 +117,29 @@ box-shadow:0 0 15px orange;
 transform:translateY(-5px);
 }
 
+.karta img{
+width:100%;
+border-radius:15px;
+margin-bottom:10px;
+}
+
 .orqaga{
-margin-top:20px;
 display:inline-block;
-padding:6px 14px;
+padding:8px 16px;
 border-radius:20px;
 background:#111;
 border:1px solid #333;
 cursor:pointer;
+margin-bottom:50px;
 }
 
 .orqaga:hover{
 border:1px solid orange;
 box-shadow:0 0 8px orange;
 }
+
+/* Map detail */
+#mapDetail{display:none;padding:40px 20px;}
 </style>
 </head>
 
@@ -141,54 +156,89 @@ box-shadow:0 0 8px orange;
 PSYCHO ART OF WAR 3 KUTUBXONASI
 </div>
 
-<div class="panjarasi">
-
-<div class="tugma" onclick="xaritaOch()">
-<i class="fa-solid fa-map"></i> Xaritalar
-</div>
-
-<div class="tugma"><i class="fa-solid fa-medal"></i> Medallar</div>
-<div class="tugma"><i class="fa-solid fa-user-ninja"></i> Qahramonlar</div>
-<div class="tugma"><i class="fa-solid fa-jet-fighter"></i> Harbiy birliklar</div>
-<div class="tugma"><i class="fa-solid fa-building"></i> Binolar</div>
-<div class="tugma"><i class="fa-solid fa-image"></i> Avatarlar</div>
-<div class="tugma"><i class="fa-solid fa-calendar"></i> Tadbirlar</div>
-<div class="tugma"><i class="fa-solid fa-book"></i> Maqolalar</div>
-<div class="tugma"><i class="fa-solid fa-newspaper"></i> Yangiliklar</div>
-
+<div class="grid">
+<div class="tugma" onclick="openMaps()"><i class="fa-solid fa-map"></i>Xaritalar</div>
+<div class="tugma"><i class="fa-solid fa-medal"></i>Medallar</div>
+<div class="tugma"><i class="fa-solid fa-user-ninja"></i>Qahramonlar</div>
+<div class="tugma"><i class="fa-solid fa-jet-fighter"></i>Harbiy birliklar</div>
+<div class="tugma"><i class="fa-solid fa-building"></i>Binolar</div>
+<div class="tugma"><i class="fa-solid fa-image"></i>Avatarlar</div>
+<div class="tugma"><i class="fa-solid fa-calendar"></i>Tadbirlar</div>
+<div class="tugma"><i class="fa-solid fa-book"></i>Maqolalar</div>
+<div class="tugma"><i class="fa-solid fa-newspaper"></i>Yangiliklar</div>
 </div>
 
 </div>
 
-<!-- XARITALAR SAHIFASI -->
+<!-- XARITALAR -->
 <div id="xaritalar">
 
 <div class="x-title">Xaritalar</div>
 
 <div class="x-grid">
-<div class="karta">Cho‘l zonasi</div>
-<div class="karta">Qorli hudud</div>
-<div class="karta">Shahar xaritasi</div>
-<div class="karta">Dengiz fronti</div>
+
+<div class="karta" onclick="showMap('Cho‘l zonasi','2v2','Tez hujum xaritasi.','chol.jpg')">
+<img src="chol.jpg">
+<h3>Cho‘l zonasi</h3>
+<p>O‘lcham: 2v2</p>
 </div>
 
-<div class="orqaga" onclick="xaritaYop()">
-<i class="fa-solid fa-arrow-left"></i> Orqaga qaytish
+<div class="karta" onclick="showMap('Qorli hudud','4v4','Himoyaviy janglar uchun.','qor.jpg')">
+<img src="qor.jpg">
+<h3>Qorli hudud</h3>
+<p>O‘lcham: 4v4</p>
 </div>
 
+<div class="karta" onclick="showMap('Shahar xaritasi','3v3','Snayper va tanklar uchun qulay.','shahar.jpg')">
+<img src="shahar.jpg">
+<h3>Shahar xaritasi</h3>
+<p>O‘lcham: 3v3</p>
+</div>
+
+<div class="karta" onclick="showMap('Dengiz fronti','2v2','Amfibiya birliklar ustun.','dengiz.jpg')">
+<img src="dengiz.jpg">
+<h3>Dengiz fronti</h3>
+<p>O‘lcham: 2v2</p>
+</div>
+
+</div>
+
+<div class="orqaga" onclick="backHome()">Orqaga</div>
+
+</div>
+
+<!-- MAP DETAIL -->
+<div id="mapDetail">
+<h2 id="mapName"></h2>
+<img id="mapImage" style="width:90%;max-width:500px;border-radius:20px;margin:20px 0;">
+<p id="mapSize"></p>
+<p id="mapDesc"></p>
+<div class="orqaga" onclick="backMaps()">Orqaga</div>
 </div>
 
 <script>
-function xaritaOch(){
+function openMaps(){
 document.getElementById("asosiy").style.display="none";
 document.getElementById("xaritalar").style.display="block";
-window.scrollTo(0,0);
 }
 
-function xaritaYop(){
+function backHome(){
 document.getElementById("xaritalar").style.display="none";
 document.getElementById("asosiy").style.display="block";
-window.scrollTo(0,0);
+}
+
+function showMap(name,size,desc,img){
+document.getElementById("xaritalar").style.display="none";
+document.getElementById("mapDetail").style.display="block";
+document.getElementById("mapName").innerText=name;
+document.getElementById("mapSize").innerText="O‘lcham: "+size;
+document.getElementById("mapDesc").innerText=desc;
+document.getElementById("mapImage").src=img;
+}
+
+function backMaps(){
+document.getElementById("mapDetail").style.display="none";
+document.getElementById("xaritalar").style.display="block";
 }
 </script>
 
