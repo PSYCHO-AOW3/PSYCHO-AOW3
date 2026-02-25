@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PSYCHO AOW3 Kutubxonasi</title>
+<title>PSYCHO ART OF WAR 3 KUTUBXONASI</title>
+
+<!-- Ikonkalar uchun -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 *{
@@ -14,99 +17,103 @@ font-family:Arial, sans-serif;
 }
 
 body{
-background:linear-gradient(to bottom,#f4f4f4,#dddddd);
+background:linear-gradient(to bottom,#ececec,#dcdcdc);
 text-align:center;
 min-height:100vh;
 }
 
 /* Yuqori qism */
 .yuqori{
-position:relative;
-padding:40px 0 20px;
+padding:90px 20px 40px;
 }
 
 .logo{
-font-size:36px;
-font-weight:bold;
+font-size:42px;
+font-weight:900;
+line-height:1.2;
 color:#ff9900;
-text-shadow:0 0 15px rgba(255,153,0,0.6);
-}
-
-.til{
-position:absolute;
-right:20px;
-top:30px;
-background:white;
-padding:8px 14px;
-border-radius:10px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
+text-transform:uppercase;
+text-shadow:
+0 0 10px rgba(255,153,0,0.8),
+0 0 20px rgba(255,153,0,0.7),
+0 0 35px rgba(255,153,0,0.6);
 }
 
 /* Tugmalar panjarasi */
 .panjarasi{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:20px;
-max-width:700px;
-margin:40px auto;
+gap:22px;
+max-width:750px;
+margin:50px auto;
 padding:0 20px;
 }
 
 .tugma{
 background:#f9f9f9;
-padding:18px;
-border-radius:18px;
+padding:20px;
+border-radius:20px;
 font-weight:bold;
-box-shadow:0 6px 15px rgba(0,0,0,0.15);
+font-size:16px;
+box-shadow:
+0 8px 20px rgba(0,0,0,0.15),
+inset 0 2px 5px rgba(255,255,255,0.6);
 transition:0.3s;
 cursor:pointer;
 border:1px solid #ddd;
 }
 
 .tugma:hover{
-transform:translateY(-6px);
-box-shadow:0 12px 25px rgba(0,0,0,0.25);
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(0,0,0,0.25);
 }
 
-/* Rasm qismi */
-.rasm{
-max-width:900px;
-margin:30px auto;
-padding:0 20px;
+/* Bog‘lanish qismi */
+.boglanish{
+margin-top:60px;
 }
 
-.rasm img{
-width:100%;
-border-radius:15px;
+.boglanish h2{
+margin-bottom:25px;
+font-size:24px;
+color:#333;
 }
 
-.matn{
-margin-top:15px;
-color:#555;
+.ijtimoiy{
+display:flex;
+flex-direction:column;
+gap:18px;
+align-items:center;
 }
 
-/* Tugma pastda */
-.video{
-display:inline-block;
-margin:30px 0;
-background:#ff9900;
-color:white;
-padding:14px 35px;
-border-radius:30px;
+.ijtugma{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+padding:14px 30px;
+border-radius:40px;
 text-decoration:none;
+color:white;
 font-weight:bold;
-box-shadow:0 6px 15px rgba(0,0,0,0.2);
+width:280px;
 transition:0.3s;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
-.video:hover{
-background:#ff8800;
+.youtube{ background:#ff0000; }
+.telegram{ background:#0088cc; }
+.klan{ background:#444; }
+.telefon{ background:#222; }
+
+.ijtugma:hover{
+transform:scale(1.08);
 }
 
 /* Pastki qism */
 .past{
-margin-top:40px;
-padding:20px;
+margin-top:50px;
+padding:25px;
 color:#777;
 font-size:14px;
 }
@@ -116,8 +123,11 @@ font-size:14px;
 <body>
 
 <div class="yuqori">
-<div class="logo">PSYCHO AOW3 KUTUBXONASI</div>
-<div class="til">🇺🇿 O‘zbek tili</div>
+<div class="logo">
+PSYCHO<br>
+ART OF WAR 3<br>
+KUTUBXONASI
+</div>
 </div>
 
 <div class="panjarasi">
@@ -132,15 +142,38 @@ font-size:14px;
 <div class="tugma">Yangiliklar</div>
 </div>
 
-<div class="rasm">
-<img src="https://images.unsplash.com/photo-1542751371-adc38448a05e">
-<div class="matn">
-Bu sayt Art of War 3 o‘yini uchun yaratilgan.
-Bu yerda xaritalar, qahramonlar va harbiy birliklar haqida ma’lumot topasiz.
-</div>
+<div class="boglanish">
+<h2>Bog‘lanish</h2>
+
+<div class="ijtimoiy">
+
+<a href="https://youtube.com/@psycho_aow3?si=iJhBaQhlRxx_-KM5" target="_blank" class="ijtugma youtube">
+<i class="fa-brands fa-youtube"></i>
+YouTube kanali
+</a>
+
+<a href="https://t.me/aow3promo1" target="_blank" class="ijtugma telegram">
+<i class="fa-brands fa-telegram"></i>
+Telegram promo kanali
+</a>
+
+<a href="https://t.me/+i5osTPLpUqpiY2Fi" target="_blank" class="ijtugma klan">
+<i class="fa-solid fa-shield-halved"></i>
+Telegram klan guruhi
+</a>
+
+<div class="ijtugma klan">
+<i class="fa-solid fa-people-group"></i>
+Klan nomi: RESISTANCE-IMBA
 </div>
 
-<a class="video" href="#">Videoni ko‘rish</a>
+<div class="ijtugma telefon">
+<i class="fa-solid fa-mobile-screen-button"></i>
++998 77 100 99 60 (Uzmobile)
+</div>
+
+</div>
+</div>
 
 <div class="past">
 © 2026 PSYCHO AOW3 | Barcha huquqlar himoyalangan
