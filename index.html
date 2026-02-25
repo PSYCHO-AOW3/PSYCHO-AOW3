@@ -44,7 +44,7 @@ z-index:-1;
 
 /* Logo */
 .logo{
-margin-top:60px;
+margin-top:40px;
 }
 
 .logo img{
@@ -53,13 +53,16 @@ width:90%;
 filter:drop-shadow(0 0 30px orange);
 }
 
-/* Sarlavha */
+/* Premium sarlavha */
 .sarlavha{
-margin-top:30px;
-font-size:28px;
+margin-top:25px;
+font-size:26px;
 font-weight:900;
-color:orange;
-text-shadow:0 0 20px orange;
+background:linear-gradient(90deg,#ff9900,#ff3300);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+text-shadow:0 0 20px rgba(255,140,0,0.6);
+letter-spacing:2px;
 }
 
 /* Menyu */
@@ -99,6 +102,8 @@ display:flex;
 flex-wrap:wrap;
 justify-content:center;
 gap:15px;
+max-width:900px;
+margin:auto;
 }
 
 .ijtugma{
