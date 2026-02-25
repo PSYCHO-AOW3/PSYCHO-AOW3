@@ -8,65 +8,45 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:#000;color:#fff;text-align:center;min-height:100vh;overflow-x:hidden;}
 
-body{
-background:#000;
-color:#fff;
-text-align:center;
-min-height:100vh;
-overflow-x:hidden;
-}
-
-/* Orqa fon glow */
+/* Glow fon */
 body::before{
 content:"";
 position:fixed;
-width:850px;
-height:850px;
-background:radial-gradient(circle, rgba(255,120,0,0.22), transparent 70%);
-top:50%;
-left:50%;
+width:900px;height:900px;
+background:radial-gradient(circle, rgba(255,120,0,0.25), transparent 70%);
+top:50%;left:50%;
 transform:translate(-50%,-50%);
-animation:fon 8s infinite alternate ease-in-out;
 z-index:-1;
+animation:fon 8s infinite alternate ease-in-out;
 }
-
 @keyframes fon{
-0%{ transform:translate(-50%,-50%) scale(1); }
-100%{ transform:translate(-50%,-50%) scale(1.15); }
+0%{transform:translate(-50%,-50%) scale(1);}
+100%{transform:translate(-50%,-50%) scale(1.15);}
 }
 
-/* Logo */
-.logo{
-margin-top:35px;
+/* ASOSIY SAHIFA */
+#asosiy{
+display:block;
 }
 
+.logo{margin-top:35px;}
 .logo img{
-max-width:360px;
-width:85%;
+max-width:360px;width:85%;
 filter:drop-shadow(0 0 18px #ff8c00);
 }
 
-/* Sarlavha */
 .sarlavha{
 margin:18px 20px 0;
 font-size:17px;
 font-weight:800;
 letter-spacing:1.5px;
-line-height:1.4;
 color:#ffa726;
-text-shadow:
-0 0 6px #ff8c00,
-0 0 12px rgba(255,140,0,0.6);
+text-shadow:0 0 6px #ff8c00,0 0 12px rgba(255,140,0,0.6);
 }
 
-/* Menyu */
 .panjarasi{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -87,10 +67,7 @@ display:flex;
 flex-direction:column;
 align-items:center;
 gap:6px;
-}
-
-.tugma i{
-font-size:20px;
+cursor:pointer;
 }
 
 .tugma:hover{
@@ -99,55 +76,62 @@ border:1px solid orange;
 box-shadow:0 0 12px rgba(255,140,0,0.6);
 }
 
-/* Pastki bog‘lanish */
-.boglanish{
-margin-top:70px;
-padding:10px;
+/* XARITALAR SAHIFA */
+#xaritalar{
+display:none;
+padding-top:40px;
 }
 
-.ijtimoiy{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:10px;
-max-width:850px;
-margin:auto;
+.x-title{
+font-size:22px;
+color:#ffa726;
+text-shadow:0 0 8px orange;
 }
 
-.ijtugma{
-display:flex;
-align-items:center;
-gap:6px;
-padding:5px 12px;
-border-radius:18px;
-font-size:11px;
-text-decoration:none;
-color:#fff;
+.x-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+max-width:800px;
+margin:40px auto;
+padding:0 20px;
+}
+
+.karta{
 background:#111;
+padding:30px;
+border-radius:20px;
 border:1px solid #222;
 transition:0.3s;
 }
 
-.ijtugma:hover{
+.karta:hover{
 border:1px solid orange;
-box-shadow:0 0 8px orange;
+box-shadow:0 0 15px orange;
+transform:translateY(-5px);
 }
 
-.youtube i{ color:#ff0000; }
-.telegram i{ color:#0088cc; }
-.klan i{ color:#bbb; }
-.telefon i{ color:#bbb; }
+.orqaga{
+margin-top:20px;
+display:inline-block;
+padding:6px 14px;
+border-radius:20px;
+background:#111;
+border:1px solid #333;
+cursor:pointer;
+}
 
-.footer{
-margin-top:40px;
-padding:20px;
-color:#888;
-font-size:13px;
+.orqaga:hover{
+border:1px solid orange;
+box-shadow:0 0 8px orange;
 }
 </style>
 </head>
 
 <body>
+
+<!-- ASOSIY SAHIFA -->
+<div id="asosiy">
 
 <div class="logo">
 <img src="aow_logo_01.png">
@@ -158,7 +142,11 @@ PSYCHO ART OF WAR 3 KUTUBXONASI
 </div>
 
 <div class="panjarasi">
-<div class="tugma"><i class="fa-solid fa-map"></i> Xaritalar</div>
+
+<div class="tugma" onclick="xaritaOch()">
+<i class="fa-solid fa-map"></i> Xaritalar
+</div>
+
 <div class="tugma"><i class="fa-solid fa-medal"></i> Medallar</div>
 <div class="tugma"><i class="fa-solid fa-user-ninja"></i> Qahramonlar</div>
 <div class="tugma"><i class="fa-solid fa-jet-fighter"></i> Harbiy birliklar</div>
@@ -167,41 +155,42 @@ PSYCHO ART OF WAR 3 KUTUBXONASI
 <div class="tugma"><i class="fa-solid fa-calendar"></i> Tadbirlar</div>
 <div class="tugma"><i class="fa-solid fa-book"></i> Maqolalar</div>
 <div class="tugma"><i class="fa-solid fa-newspaper"></i> Yangiliklar</div>
-</div>
 
-<div class="boglanish">
-<div class="ijtimoiy">
-
-<a href="https://youtube.com/@psycho_aow3?si=iJhBaQhlRxx_-KM5" target="_blank" class="ijtugma youtube">
-<i class="fa-brands fa-youtube"></i> YouTube
-</a>
-
-<a href="https://t.me/aow3promo1" target="_blank" class="ijtugma telegram">
-<i class="fa-brands fa-telegram"></i> Promo
-</a>
-
-<a href="https://t.me/+i5osTPLpUqpiY2Fi" target="_blank" class="ijtugma klan">
-<i class="fa-solid fa-shield-halved"></i> Klan guruhi
-</a>
-
-<a href="https://t.me/musolliiyynn" target="_blank" class="ijtugma telegram">
-<i class="fa-brands fa-telegram"></i> @musolliiyynn
-</a>
-
-<div class="ijtugma klan">
-<i class="fa-solid fa-people-group"></i> RESISTANCE-IMBA
-</div>
-
-<div class="ijtugma telefon">
-<i class="fa-solid fa-mobile-screen-button"></i> +998 77 100 99 60
 </div>
 
 </div>
+
+<!-- XARITALAR SAHIFASI -->
+<div id="xaritalar">
+
+<div class="x-title">Xaritalar</div>
+
+<div class="x-grid">
+<div class="karta">Cho‘l zonasi</div>
+<div class="karta">Qorli hudud</div>
+<div class="karta">Shahar xaritasi</div>
+<div class="karta">Dengiz fronti</div>
 </div>
 
-<div class="footer">
-© 2026 PSYCHO AOW3 | Barcha huquqlar himoyalangan
+<div class="orqaga" onclick="xaritaYop()">
+<i class="fa-solid fa-arrow-left"></i> Orqaga qaytish
 </div>
+
+</div>
+
+<script>
+function xaritaOch(){
+document.getElementById("asosiy").style.display="none";
+document.getElementById("xaritalar").style.display="block";
+window.scrollTo(0,0);
+}
+
+function xaritaYop(){
+document.getElementById("xaritalar").style.display="none";
+document.getElementById("asosiy").style.display="block";
+window.scrollTo(0,0);
+}
+</script>
 
 </body>
 </html>
