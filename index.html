@@ -50,7 +50,9 @@ margin-top:40px;
 .logo img{
 max-width:420px;
 width:90%;
-filter:drop-shadow(0 0 25px orange);
+filter:
+drop-shadow(0 0 15px #ff8c00)
+drop-shadow(0 0 35px rgba(255,120,0,0.7));
 }
 
 /* Sarlavha */
@@ -86,6 +88,15 @@ transition:0.3s;
 box-shadow:
 0 0 8px rgba(255,140,0,0.25),
 inset 0 0 6px rgba(255,140,0,0.08);
+
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:8px;
+}
+
+.tugma i{
+font-size:22px;
 }
 
 .tugma:hover{
@@ -112,6 +123,7 @@ margin:auto;
 .ijtugma{
 display:flex;
 align-items:center;
+justify-content:center;
 gap:8px;
 padding:8px 16px;
 border-radius:25px;
@@ -121,6 +133,7 @@ color:white;
 background:linear-gradient(145deg,#0d0d0d,#1a1a1a);
 border:1px solid #222;
 transition:0.3s;
+min-width:150px;
 }
 
 .ijtugma:hover{
