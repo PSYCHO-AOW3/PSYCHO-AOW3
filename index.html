@@ -23,23 +23,23 @@ min-height:100vh;
 overflow-x:hidden;
 }
 
-/* Orqa animatsion nur */
+/* Orqa animatsion fon */
 body::before{
 content:"";
 position:fixed;
-width:900px;
-height:900px;
-background:radial-gradient(circle, rgba(255,140,0,0.35), transparent 70%);
+width:1000px;
+height:1000px;
+background:radial-gradient(circle, rgba(255,120,0,0.35), transparent 70%);
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-animation:fon 6s infinite alternate ease-in-out;
+animation:fon 7s infinite alternate ease-in-out;
 z-index:-1;
 }
 
 @keyframes fon{
 0%{ transform:translate(-50%,-50%) scale(1); }
-100%{ transform:translate(-50%,-50%) scale(1.3); }
+100%{ transform:translate(-50%,-50%) scale(1.25); }
 }
 
 /* Logo */
@@ -50,22 +50,23 @@ margin-top:40px;
 .logo img{
 max-width:420px;
 width:90%;
-filter:drop-shadow(0 0 30px orange);
+filter:drop-shadow(0 0 25px orange);
 }
 
 /* Sarlavha */
 .sarlavha{
-margin-top:15px;
-font-size:24px;
-font-weight:900;
-background:linear-gradient(90deg,#ff9900,#ff3300);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-text-shadow:0 0 18px rgba(255,140,0,0.7);
-letter-spacing:1.5px;
+margin-top:12px;
+font-size:22px;
+font-weight:800;
+letter-spacing:2px;
+color:#ff9d00;
+text-shadow:
+0 0 10px #ff8c00,
+0 0 20px #ff5e00,
+0 0 40px rgba(255,100,0,0.5);
 }
 
-/* Menyu */
+/* Menyu panjara */
 .panjarasi{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -83,20 +84,20 @@ font-weight:bold;
 border:1px solid #222;
 transition:0.3s;
 box-shadow:
-0 0 10px rgba(255,140,0,0.3),
-inset 0 0 10px rgba(255,140,0,0.1);
+0 0 8px rgba(255,140,0,0.25),
+inset 0 0 6px rgba(255,140,0,0.08);
 }
 
 .tugma:hover{
-transform:translateY(-6px) scale(1.05);
-box-shadow:0 0 30px orange;
+transform:translateY(-5px) scale(1.04);
+box-shadow:0 0 18px rgba(255,140,0,0.7);
 border:1px solid orange;
 }
 
-/* Pastki panel */
+/* Bog‘lanish */
 .boglanish{
 margin-top:80px;
-padding:30px 10px;
+padding:20px 10px;
 }
 
 .ijtimoiy{
@@ -124,7 +125,7 @@ transition:0.3s;
 
 .ijtugma:hover{
 border:1px solid orange;
-box-shadow:0 0 15px orange;
+box-shadow:0 0 12px orange;
 transform:translateY(-3px);
 }
 
@@ -133,6 +134,7 @@ transform:translateY(-3px);
 .telefon i{ color:#aaa; }
 .klan i{ color:#ccc; }
 
+/* Footer */
 .footer{
 margin-top:60px;
 padding:20px;
@@ -153,48 +155,42 @@ PSYCHO ART OF WAR 3 KUTUBXONASI
 </div>
 
 <div class="panjarasi">
-<div class="tugma">Xaritalar</div>
-<div class="tugma">Medallar</div>
-<div class="tugma">Qahramonlar</div>
-<div class="tugma">Harbiy birliklar</div>
-<div class="tugma">Binolar</div>
-<div class="tugma">Avatarlar</div>
-<div class="tugma">Tadbirlar</div>
-<div class="tugma">Maqolalar</div>
-<div class="tugma">Yangiliklar</div>
+<div class="tugma"><i class="fa-solid fa-map"></i> Xaritalar</div>
+<div class="tugma"><i class="fa-solid fa-medal"></i> Medallar</div>
+<div class="tugma"><i class="fa-solid fa-user-ninja"></i> Qahramonlar</div>
+<div class="tugma"><i class="fa-solid fa-jet-fighter"></i> Harbiy birliklar</div>
+<div class="tugma"><i class="fa-solid fa-building"></i> Binolar</div>
+<div class="tugma"><i class="fa-solid fa-image"></i> Avatarlar</div>
+<div class="tugma"><i class="fa-solid fa-calendar"></i> Tadbirlar</div>
+<div class="tugma"><i class="fa-solid fa-book"></i> Maqolalar</div>
+<div class="tugma"><i class="fa-solid fa-newspaper"></i> Yangiliklar</div>
 </div>
 
 <div class="boglanish">
 <div class="ijtimoiy">
 
 <a href="https://youtube.com/@psycho_aow3?si=iJhBaQhlRxx_-KM5" target="_blank" class="ijtugma youtube">
-<i class="fa-brands fa-youtube"></i>
-YouTube
+<i class="fa-brands fa-youtube"></i> YouTube
 </a>
 
 <a href="https://t.me/aow3promo1" target="_blank" class="ijtugma telegram">
-<i class="fa-brands fa-telegram"></i>
-Promo
+<i class="fa-brands fa-telegram"></i> Promo
 </a>
 
 <a href="https://t.me/+i5osTPLpUqpiY2Fi" target="_blank" class="ijtugma klan">
-<i class="fa-solid fa-shield-halved"></i>
-Klan guruhi
+<i class="fa-solid fa-shield-halved"></i> Klan guruhi
 </a>
 
 <a href="https://t.me/musolliiyynn" target="_blank" class="ijtugma telegram">
-<i class="fa-brands fa-telegram"></i>
-@musolliiyynn
+<i class="fa-brands fa-telegram"></i> @musolliiyynn
 </a>
 
 <div class="ijtugma klan">
-<i class="fa-solid fa-people-group"></i>
-RESISTANCE-IMBA
+<i class="fa-solid fa-people-group"></i> RESISTANCE-IMBA
 </div>
 
 <div class="ijtugma telefon">
-<i class="fa-solid fa-mobile-screen-button"></i>
-+998 77 100 99 60
+<i class="fa-solid fa-mobile-screen-button"></i> +998 77 100 99 60
 </div>
 
 </div>
