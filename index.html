@@ -23,12 +23,12 @@ min-height:100vh;
 overflow-x:hidden;
 }
 
-/* Orqa fon animatsiya */
+/* Orqa animatsion nur */
 body::before{
 content:"";
 position:fixed;
-width:800px;
-height:800px;
+width:900px;
+height:900px;
 background:radial-gradient(circle, rgba(255,140,0,0.35), transparent 70%);
 top:50%;
 left:50%;
@@ -50,7 +50,7 @@ margin-top:60px;
 .logo img{
 max-width:420px;
 width:90%;
-filter:drop-shadow(0 0 25px orange);
+filter:drop-shadow(0 0 30px orange);
 }
 
 /* Sarlavha */
@@ -59,10 +59,10 @@ margin-top:30px;
 font-size:28px;
 font-weight:900;
 color:orange;
-text-shadow:0 0 15px orange;
+text-shadow:0 0 20px orange;
 }
 
-/* Tugmalar panjarasi */
+/* Menyu */
 .panjarasi{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -88,61 +88,47 @@ box-shadow:0 0 25px orange;
 border:1px solid orange;
 }
 
-/* Bog‘lanish */
+/* Pastki bog‘lanish panel */
 .boglanish{
 margin-top:80px;
-}
-
-.boglanish h2{
-font-size:26px;
-margin-bottom:20px;
+padding:30px 10px;
 }
 
 .ijtimoiy{
 display:flex;
-flex-direction:column;
-gap:18px;
-align-items:center;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
 }
 
 .ijtugma{
 display:flex;
 align-items:center;
-justify-content:center;
-gap:12px;
-padding:16px 30px;
-border-radius:40px;
+gap:8px;
+padding:10px 18px;
+border-radius:25px;
+font-size:14px;
 text-decoration:none;
 color:white;
-font-weight:bold;
-width:300px;
+background:#111;
+border:1px solid #333;
 transition:0.3s;
 }
 
-.youtube{
-background:#ff0000;
-}
-
-.telegram{
-background:#0088cc;
-}
-
-.klan{
-background:#444;
-}
-
-.telefon{
-background:#222;
-}
-
 .ijtugma:hover{
-transform:scale(1.07);
-box-shadow:0 0 25px orange;
+border:1px solid orange;
+box-shadow:0 0 12px orange;
+transform:translateY(-3px);
 }
+
+.youtube i{ color:#ff0000; }
+.telegram i{ color:#0088cc; }
+.telefon i{ color:#aaa; }
+.klan i{ color:#ccc; }
 
 .footer{
-margin-top:80px;
-padding:30px;
+margin-top:60px;
+padding:20px;
 color:#aaa;
 font-size:14px;
 }
@@ -172,33 +158,36 @@ PSYCHO ART OF WAR 3 KUTUBXONASI
 </div>
 
 <div class="boglanish">
-<h2>Bog‘lanish</h2>
-
 <div class="ijtimoiy">
 
 <a href="https://youtube.com/@psycho_aow3?si=iJhBaQhlRxx_-KM5" target="_blank" class="ijtugma youtube">
 <i class="fa-brands fa-youtube"></i>
-YouTube kanali
+YouTube
 </a>
 
 <a href="https://t.me/aow3promo1" target="_blank" class="ijtugma telegram">
 <i class="fa-brands fa-telegram"></i>
-Telegram promo kanali
+Promo
 </a>
 
 <a href="https://t.me/+i5osTPLpUqpiY2Fi" target="_blank" class="ijtugma klan">
 <i class="fa-solid fa-shield-halved"></i>
-Telegram klan guruhi
+Klan guruhi
+</a>
+
+<a href="https://t.me/musolliiyynn" target="_blank" class="ijtugma telegram">
+<i class="fa-brands fa-telegram"></i>
+@musolliiyynn
 </a>
 
 <div class="ijtugma klan">
 <i class="fa-solid fa-people-group"></i>
-Klan nomi: RESISTANCE-IMBA
+RESISTANCE-IMBA
 </div>
 
 <div class="ijtugma telefon">
 <i class="fa-solid fa-mobile-screen-button"></i>
-+998 77 100 99 60 (Uzmobile)
++998 77 100 99 60
 </div>
 
 </div>
