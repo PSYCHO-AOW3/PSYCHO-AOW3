@@ -1,27 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="uz">
 <head>
-    <title>PSYCHO AOW3</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PSYCHO AOW3</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#000000,#001a00,#003300);
+color:white;
+text-align:center;
+}
+
+h1{
+font-size:48px;
+color:#00ff00;
+margin-bottom:10px;
+animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{ text-shadow:0 0 10px #00ff00;}
+to{ text-shadow:0 0 25px #00ff00;}
+}
+
+h2{
+margin-bottom:10px;
+}
+
+p{
+margin-bottom:40px;
+color:#ccc;
+}
+
+.button{
+display:inline-block;
+padding:15px 35px;
+margin:10px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.youtube{
+background:red;
+color:white;
+}
+
+.telegram{
+background:#0088cc;
+color:white;
+}
+
+.button:hover{
+transform:scale(1.1);
+box-shadow:0 0 20px white;
+}
+</style>
+
 </head>
-<body style="background:black; color:lime; text-align:center; font-family:Arial;">
+<body>
 
-    <h1>PSYCHO AOW3 🔥</h1>
-    <h2>Official PvP Site</h2>
-    <p>Art of War 3 Master</p>
+<h1>PSYCHO AOW3 🔥</h1>
+<h2>Rasmiy PvP sayti</h2>
+<p>Urush san'ati 3 ustasi</p>
 
-    <br><br>
+<a class="button youtube" href="https://youtube.com/@psycho_aow3?si=Ly2fojfMNRYhNGuV" target="_blank">
+YouTube kanali
+</a>
 
-    <a href="https://youtube.com/@psycho_aow3" target="_blank"
-    style="display:inline-block; padding:12px 25px; background:red; color:white; text-decoration:none; border-radius:8px; font-weight:bold;">
-    🔴 YouTube Channel
-    </a>
-
-    <br><br>
-
-    <a href="https://t.me/aow3promo1" target="_blank"
-    style="display:inline-block; padding:12px 25px; background:#0088cc; color:white; text-decoration:none; border-radius:8px; font-weight:bold;">
-    🔵 Telegram Channel
-    </a>
+<a class="button telegram" href="https://t.me/aow3promo1" target="_blank">
+Telegram kanali
+</a>
 
 </body>
 </html>
