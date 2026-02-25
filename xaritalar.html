@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xaritalar | PSYCHO AOW3</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:black;
+color:white;
+text-align:center;
+min-height:100vh;
+}
+
+/* Fon glow */
+body::before{
+content:"";
+position:fixed;
+width:900px;
+height:900px;
+background:radial-gradient(circle, rgba(255,120,0,0.25), transparent 70%);
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+z-index:-1;
+}
+
+/* Sarlavha */
+h1{
+margin-top:40px;
+color:#ffa726;
+text-shadow:0 0 10px orange;
+}
+
+.qaytish{
+margin-top:20px;
+display:inline-block;
+padding:8px 16px;
+background:#111;
+border:1px solid #333;
+border-radius:20px;
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+.qaytish:hover{
+border:1px solid orange;
+box-shadow:0 0 10px orange;
+}
+
+/* Xaritalar grid */
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+max-width:700px;
+margin:50px auto;
+padding:20px;
+}
+
+.karta{
+background:#111;
+padding:30px;
+border-radius:20px;
+border:1px solid #222;
+transition:0.3s;
+}
+
+.karta:hover{
+transform:translateY(-5px);
+border:1px solid orange;
+box-shadow:0 0 15px orange;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Xaritalar</h1>
+
+<a href="index.html" class="qaytish">
+<i class="fa-solid fa-arrow-left"></i> Asosiy sahifa
+</a>
+
+<div class="grid">
+
+<div class="karta">Cho‘l zonasi</div>
+<div class="karta">Qorli hudud</div>
+<div class="karta">Shahar xaritasi</div>
+<div class="karta">Dengiz fronti</div>
+
+</div>
+
+</body>
+</html>
