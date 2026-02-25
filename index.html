@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PSYCHO AOW3</title>
+<title>PSYCHO AOW3 - Library</title>
 
 <style>
 *{
@@ -14,77 +14,126 @@ font-family:Arial, sans-serif;
 }
 
 body{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-background:linear-gradient(135deg,#000000,#001a00,#003300);
-color:white;
+background:#e6e6e6;
 text-align:center;
 }
 
-h1{
-font-size:48px;
-color:#00ff00;
-margin-bottom:10px;
-animation: glow 2s infinite alternate;
+header{
+padding:30px 0;
 }
 
-@keyframes glow{
-from{ text-shadow:0 0 10px #00ff00;}
-to{ text-shadow:0 0 25px #00ff00;}
-}
-
-h2{
-margin-bottom:10px;
-}
-
-p{
-margin-bottom:40px;
-color:#ccc;
-}
-
-.button{
-display:inline-block;
-padding:15px 35px;
-margin:10px;
-border-radius:30px;
-text-decoration:none;
+.logo{
+font-size:32px;
 font-weight:bold;
+color:orange;
+text-shadow:0 0 10px orange;
+}
+
+.lang{
+position:absolute;
+right:20px;
+top:30px;
+background:white;
+padding:8px 15px;
+border-radius:8px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+max-width:600px;
+margin:30px auto;
+}
+
+.card{
+padding:15px;
+border:2px solid #ccc;
+border-radius:15px;
+background:white;
+font-weight:bold;
+cursor:pointer;
 transition:0.3s;
 }
 
-.youtube{
-background:red;
-color:white;
+.card:hover{
+background:#f2f2f2;
+transform:scale(1.05);
 }
 
-.telegram{
-background:#0088cc;
-color:white;
+.banner{
+margin:40px auto;
+max-width:800px;
+position:relative;
 }
 
-.button:hover{
-transform:scale(1.1);
-box-shadow:0 0 20px white;
+.banner img{
+width:100%;
+border-radius:10px;
+}
+
+.banner-text{
+position:absolute;
+bottom:20px;
+left:20px;
+right:20px;
+color:white;
+font-size:14px;
+text-shadow:0 0 10px black;
+}
+
+.trailer{
+display:inline-block;
+margin-top:20px;
+background:orange;
+color:white;
+padding:12px 30px;
+border-radius:25px;
+text-decoration:none;
+font-weight:bold;
+}
+
+footer{
+margin-top:50px;
+padding:20px;
+color:#666;
 }
 </style>
-
 </head>
+
 <body>
 
-<h1>PSYCHO AOW3 🔥</h1>
-<h2>Rasmiy PvP sayti</h2>
-<p>Urush san'ati 3 ustasi</p>
+<div class="lang">🇺🇿 Uzbek</div>
 
-<a class="button youtube" href="https://youtube.com/@psycho_aow3?si=Ly2fojfMNRYhNGuV" target="_blank">
-YouTube kanali
-</a>
+<header>
+<div class="logo">ART OF WAR<br>PSYCHO LIBRARY</div>
+</header>
 
-<a class="button telegram" href="https://t.me/aow3promo1" target="_blank">
-Telegram kanali
-</a>
+<div class="grid">
+<div class="card">Xaritalar</div>
+<div class="card">Medallar</div>
+<div class="card">Qahramonlar</div>
+<div class="card">Unitlar</div>
+<div class="card">Binolar</div>
+<div class="card">Avatarlar</div>
+<div class="card">Tadbirlar</div>
+<div class="card">Maqolalar</div>
+<div class="card">Yangiliklar</div>
+</div>
+
+<div class="banner">
+<img src="https://i.imgur.com/9QZ7Z6D.jpg">
+<div class="banner-text">
+Bu sayt Art of War 3 o‘yini uchun yaratilgan.
+Bu yerda xaritalar, qahramonlar va unitlar haqida ma'lumot topasiz.
+</div>
+</div>
+
+<a class="trailer" href="#">Treylr ko‘rish</a>
+
+<footer>
+© 2026 PSYCHO AOW3 | All Rights Reserved
+</footer>
 
 </body>
 </html>
