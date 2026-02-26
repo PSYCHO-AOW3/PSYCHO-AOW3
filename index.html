@@ -3,244 +3,206 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PSYCHO ART OF WAR 3 KUTUBXONASI</title>
+<title>PSYCHO AOW3 Kutubxonasi</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+
 body{
-background:#000;
-color:#fff;
+margin:0;
+font-family:Arial, sans-serif;
+background:radial-gradient(circle at center, #2b1200 0%, #120800 100%);
+color:white;
 text-align:center;
-min-height:100vh;
-overflow-x:hidden;
 }
 
-/* Glow fon */
-body::before{
-content:"";
-position:fixed;
-width:900px;
-height:900px;
-background:radial-gradient(circle, rgba(255,120,0,0.25), transparent 70%);
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-z-index:-1;
-animation:fon 8s infinite alternate ease-in-out;
-}
-@keyframes fon{
-0%{transform:translate(-50%,-50%) scale(1);}
-100%{transform:translate(-50%,-50%) scale(1.15);}
+.logo{
+margin-top:30px;
 }
 
-/* Logo */
-.logo{margin-top:35px;}
 .logo img{
-max-width:340px;
-width:85%;
-filter:drop-shadow(0 0 18px #ff8c00);
+width:220px;
 }
 
-/* Sarlavha */
-.sarlavha{
-margin:20px;
-font-size:18px;
-font-weight:800;
-letter-spacing:1.5px;
-color:#ffa726;
-text-shadow:0 0 6px #ff8c00,0 0 12px rgba(255,140,0,0.6);
+h1{
+color:#ff8c00;
+margin-top:20px;
+text-shadow:0 0 15px #ff8c00;
 }
 
-/* Grid */
 .grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:18px;
-max-width:700px;
-margin:50px auto;
-padding:0 20px;
-}
-
-.tugma{
-background:#111;
-padding:18px;
-border-radius:18px;
-font-weight:bold;
-border:1px solid #222;
-transition:0.3s;
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:6px;
-cursor:pointer;
-}
-
-.tugma:hover{
-transform:translateY(-4px);
-border:1px solid orange;
-box-shadow:0 0 12px rgba(255,140,0,0.6);
-}
-
-/* Xaritalar sahifa */
-#xaritalar{display:none;padding-top:40px;}
-
-.x-title{
-font-size:22px;
-color:#ffa726;
-text-shadow:0 0 8px orange;
-margin-bottom:30px;
-}
-
-.x-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
 gap:20px;
-max-width:700px;
-margin:0 auto 40px auto;
+max-width:900px;
+margin:40px auto;
 padding:0 20px;
 }
 
-.karta{
+.card{
 background:#111;
-padding:15px;
+padding:25px;
 border-radius:20px;
-border:1px solid #222;
+text-decoration:none;
+color:white;
 transition:0.3s;
-cursor:pointer;
+box-shadow:0 0 15px rgba(255,140,0,0.2);
 }
 
-.karta:hover{
-border:1px solid orange;
-box-shadow:0 0 15px orange;
+.card i{
+font-size:28px;
+margin-bottom:10px;
+display:block;
+}
+
+.card:hover{
+box-shadow:0 0 25px #ff8c00;
 transform:translateY(-5px);
 }
 
-.karta img{
-width:100%;
-border-radius:15px;
-margin-bottom:10px;
+.social{
+margin-top:40px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+padding:0 20px;
 }
 
-.orqaga{
-display:inline-block;
-padding:8px 16px;
-border-radius:20px;
+.social a{
 background:#111;
-border:1px solid #333;
-cursor:pointer;
-margin-bottom:50px;
+padding:12px 20px;
+border-radius:25px;
+text-decoration:none;
+color:white;
+display:flex;
+align-items:center;
+gap:10px;
+transition:0.3s;
+box-shadow:0 0 10px rgba(255,140,0,0.2);
 }
 
-.orqaga:hover{
-border:1px solid orange;
-box-shadow:0 0 8px orange;
+.social a:hover{
+box-shadow:0 0 20px #ff8c00;
 }
 
-/* Map detail */
-#mapDetail{display:none;padding:40px 20px;}
+footer{
+margin-top:40px;
+padding:20px;
+font-size:14px;
+color:#aaa;
+}
+
+@media(max-width:768px){
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:500px){
+.grid{
+grid-template-columns:1fr;
+}
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- ASOSIY SAHIFA -->
-<div id="asosiy">
-
 <div class="logo">
 <img src="aow_logo_01.png">
 </div>
 
-<div class="sarlavha">
-PSYCHO ART OF WAR 3 KUTUBXONASI
-</div>
+<h1>PSYCHO ART OF WAR 3 KUTUBXONASI</h1>
 
 <div class="grid">
-<div class="tugma" onclick="openMaps()"><i class="fa-solid fa-map"></i>Xaritalar</div>
-<div class="tugma"><i class="fa-solid fa-medal"></i>Medallar</div>
-<div class="tugma"><i class="fa-solid fa-user-ninja"></i>Qahramonlar</div>
-<div class="tugma"><i class="fa-solid fa-jet-fighter"></i>Harbiy birliklar</div>
-<div class="tugma"><i class="fa-solid fa-building"></i>Binolar</div>
-<div class="tugma"><i class="fa-solid fa-image"></i>Avatarlar</div>
-<div class="tugma"><i class="fa-solid fa-calendar"></i>Tadbirlar</div>
-<div class="tugma"><i class="fa-solid fa-book"></i>Maqolalar</div>
-<div class="tugma"><i class="fa-solid fa-newspaper"></i>Yangiliklar</div>
-</div>
+
+<a href="xaritalar.html" class="card">
+<i class="fa-solid fa-map"></i>
+Xaritalar
+</a>
+
+<a href="#" class="card">
+<i class="fa-solid fa-medal"></i>
+Medallar
+</a>
+
+<a href="#" class="card">
+<i class="fa-solid fa-user"></i>
+Qahramonlar
+</a>
+
+<a href="#" class="card">
+<i class="fa-solid fa-jet-fighter"></i>
+Harbiy birliklar
+</a>
+
+<a href="#" class="card">
+<i class="fa-solid fa-building"></i>
+Binolar
+</a>
+
+<a href="#" class="card">
+<i class="fa-solid fa-image"></i>
+Avatarlar
+</a>
+
+<a href="#" class="card">
+<i class="fa-solid fa-calendar"></i>
+Tadbirlar
+</a>
+
+<a href="#" class="card">
+<i class="fa-solid fa-book"></i>
+Maqolalar
+</a>
+
+<a href="#" class="card">
+<i class="fa-solid fa-newspaper"></i>
+Yangiliklar
+</a>
 
 </div>
 
-<!-- XARITALAR -->
-<div id="xaritalar">
+<div class="social">
 
-<div class="x-title">Xaritalar</div>
+<a href="https://youtube.com/@psycho_aow3?si=iJhBaQhlRxx_-KM5">
+<i class="fa-brands fa-youtube" style="color:red;"></i>
+YouTube
+</a>
 
-<div class="x-grid">
+<a href="https://t.me/aow3promo1">
+<i class="fa-brands fa-telegram" style="color:#1da1f2;"></i>
+Promo
+</a>
 
-<div class="karta" onclick="showMap('Cho‘l zonasi','2v2','Tez hujum xaritasi.','chol.jpg')">
-<img src="chol.jpg">
-<h3>Cho‘l zonasi</h3>
-<p>O‘lcham: 2v2</p>
-</div>
+<a href="https://t.me/+i5osTPLpUqpiY2Fi">
+<i class="fa-solid fa-shield"></i>
+Klan guruhi
+</a>
 
-<div class="karta" onclick="showMap('Qorli hudud','4v4','Himoyaviy janglar uchun.','qor.jpg')">
-<img src="qor.jpg">
-<h3>Qorli hudud</h3>
-<p>O‘lcham: 4v4</p>
-</div>
+<a href="https://t.me/musolliiynn">
+<i class="fa-brands fa-telegram"></i>
+@musolliiynn
+</a>
 
-<div class="karta" onclick="showMap('Shahar xaritasi','3v3','Snayper va tanklar uchun qulay.','shahar.jpg')">
-<img src="shahar.jpg">
-<h3>Shahar xaritasi</h3>
-<p>O‘lcham: 3v3</p>
-</div>
+<a href="#">
+<i class="fa-solid fa-users"></i>
+RESISTANCE-IMBA
+</a>
 
-<div class="karta" onclick="showMap('Dengiz fronti','2v2','Amfibiya birliklar ustun.','dengiz.jpg')">
-<img src="dengiz.jpg">
-<h3>Dengiz fronti</h3>
-<p>O‘lcham: 2v2</p>
-</div>
-
-</div>
-
-<div class="orqaga" onclick="backHome()">Orqaga</div>
+<a href="tel:+998771009960">
+<i class="fa-solid fa-mobile-screen"></i>
++998 77 100 99 60
+</a>
 
 </div>
 
-<!-- MAP DETAIL -->
-<div id="mapDetail">
-<h2 id="mapName"></h2>
-<img id="mapImage" style="width:90%;max-width:500px;border-radius:20px;margin:20px 0;">
-<p id="mapSize"></p>
-<p id="mapDesc"></p>
-<div class="orqaga" onclick="backMaps()">Orqaga</div>
-</div>
-
-<script>
-function openMaps(){
-document.getElementById("asosiy").style.display="none";
-document.getElementById("xaritalar").style.display="block";
-}
-
-function backHome(){
-document.getElementById("xaritalar").style.display="none";
-document.getElementById("asosiy").style.display="block";
-}
-
-function showMap(name,size,desc,img){
-document.getElementById("xaritalar").style.display="none";
-document.getElementById("mapDetail").style.display="block";
-document.getElementById("mapName").innerText=name;
-document.getElementById("mapSize").innerText="O‘lcham: "+size;
-document.getElementById("mapDesc").innerText=desc;
-document.getElementById("mapImage").src=img;
-}
-
-function backMaps(){
-document.getElementById("mapDetail").style.display="none";
-document.getElementById("xaritalar").style.display="block";
-}
-</script>
+<footer>
+© 2026 PSYCHO AOW3 | Barcha huquqlar himoyalangan
+</footer>
 
 </body>
 </html>
